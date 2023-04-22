@@ -17,13 +17,10 @@
         >
         <TableRow>
             <TextView
-                android:text="@string/name_label"
-                android:id="@+id/name_label"
+                android:text="Cosmo Kramer is logged in!"
+                android:id="@+id/logged_in_string"
                 />
-            <TextView
-                tools:text="Johnny Appleseed"
-                android:id="@+id/name_value"
-                />
+
         </TableRow>
-    <TableLayout>
-<LinearLayout>
+    </TableLayout>
+</LinearLayout>

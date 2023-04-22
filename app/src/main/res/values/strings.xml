@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">4350IndividualAssign1</string>
+    <string name="logged_in_string">%1$s is logged in!</string>
 </resources>

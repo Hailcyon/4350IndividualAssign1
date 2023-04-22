@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                 //Start an activity and pass the data to it.
                 val messageIntent = Intent(this, ProfileDisplayActivity::class.java)
-                messageIntent.putExtra("NAME", "$firstNameValue $middleNameValue $lastNameValue")
+                messageIntent.putExtra("NAME", "$firstNameValue $lastNameValue")
                 this.startActivity(messageIntent)
             }
         }
