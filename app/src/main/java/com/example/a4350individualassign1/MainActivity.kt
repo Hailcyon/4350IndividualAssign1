@@ -21,13 +21,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mButtonCamera: Button? = null
     private var mButtonSubmit: Button? = null
     private var mIvPic: ImageView? = null
+    private var firstNameTextEdit: EditText? = null
+    private var lastNameTextEdit: EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         requestedOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR
 
-//        firstNameTextEdit = findViewById(R.id.firstNameInput)
-//        lastNameTextEdit = findViewById(R.id.lastNameInput)
+        firstNameTextEdit = findViewById(R.id.firstNameInput)
+        lastNameTextEdit = findViewById(R.id.lastNameInput)
 
         //Get the buttons
         mButtonCamera = findViewById(R.id.PhotoButton)
@@ -84,7 +86,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val thumbnailImage = result.data!!.getParcelableExtra<Bitmap>("data")
                 mIvPic!!.setImageBitmap(thumbnailImage)
 
-                if (thumbnailImage != null) { //** This saves the thumbnail to cache **//*
+                if (thumbnailImage != null) { // save image to cache
                     saveBitmapToCache(thumbnailImage)
                 }
             }
